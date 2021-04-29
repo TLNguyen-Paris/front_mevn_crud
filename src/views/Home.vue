@@ -1,10 +1,17 @@
 <template>
-    <div>
-        <h1>Home page</h1>
-    </div>
+    <section class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <h3 class="text-center">Home page</h3>
+            </div>
+        </div>
+    </section>
+
 </template>
 
 <script>
+
+// import ref
 
 export default {
     
