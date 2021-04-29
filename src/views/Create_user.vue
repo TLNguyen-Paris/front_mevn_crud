@@ -37,7 +37,8 @@
 
 <script>
 
-// import ref
+require('dotenv').config()
+import axios from 'axios'
 
 export default {
     setup() {
@@ -49,7 +50,13 @@ export default {
         }
 
         function SubmitForm() {
-
+            axios.post(`${process.env.VUE_APP_BACKEND_URL}/api/create-user`, User)
+                .then((res) => {
+                    console.log(res);
+                })
+                .catch((error) => {
+                    console.error(error);
+                })
         }
 
         return {
