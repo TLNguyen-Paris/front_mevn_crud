@@ -22,7 +22,9 @@
                                 <router-link :to="{name: 'Edit', params: { id: User._id }}" class="btn btn-success">
                                     Edit
                                 </router-link>
-                                <button @click.prevent="deleteUser(User._id)" class="btn btn-danger">Delete</button>
+                                <button @click.prevent="deleteUser(User._id)" class="btn btn-danger">
+                                    Delete
+                                </button>
                             </td>
                         </tr>
                     </tbody>
