@@ -1,11 +1,4 @@
 <template>
-    <!-- <section class="container mt-5">
-        <div class="row justify-content-center">
-            <div class="col-md-6">
-                <h3 class="text-center">View page</h3>
-            </div>
-        </div>
-    </section> -->
     <section class="container mt-5">
         <div class="row">
             <div class="col-md-12">
@@ -16,6 +9,7 @@
                             <th>Lastname</th>
                             <th>Phone</th>
                             <th>Email</th>
+                            <th>Actions</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -36,7 +30,6 @@
             </div>
         </div>
     </section>
-
 </template>
 
 <script>
@@ -52,7 +45,6 @@ export default {
             return axios.get(`${process.env.VUE_APP_BACKEND_URL}/api`)
                 .then(response => {
                     Users.value = response.data
-                    console.log(Users);
                 })
                 .catch(error => {
                     console.error(error);
@@ -60,10 +52,22 @@ export default {
         }
 
 
+        function deleteUser(id){
+            let UserIndex = Users.value.findIndex(usr => usr._id === id)
+
+            if (window.confirm("This action will delete the user, Are you sure about that ?")){
+                axios.delete(`${process.env.VUE_APP_BACKEND_URL}/api/delete-user/${id}`)
+                    .then(Users.value.splice(UserIndex,1))
+                    .catch((error) => {
+                        console.error(error);
+                    })
+            }
+        }
 
         return {
             Users,
-            getUsers
+            getUsers,
+            deleteUser
         }
     },
     created() {
