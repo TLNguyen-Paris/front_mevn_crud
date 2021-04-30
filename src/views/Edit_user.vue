@@ -7,13 +7,10 @@
         </div>
     </section>
 
+
 </template>
 
 <script>
 
-// import ref
 
-export default {
-    
-}
 </script>

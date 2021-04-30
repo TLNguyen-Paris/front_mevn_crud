@@ -51,8 +51,8 @@ export default {
 
         function SubmitForm() {
             axios.post(`${process.env.VUE_APP_BACKEND_URL}/api/create-user`, User)
-                .then((res) => {
-                    console.log(res);
+                .then(() => {
+                    console.log("User send");
                 })
                 .catch((error) => {
                     console.error(error);
