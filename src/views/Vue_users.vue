@@ -24,11 +24,12 @@
                             <td>{{ User.lastname }}</td>
                             <td>{{ User.phone }}</td>
                             <td>{{ User.email }}</td>
-                            <!-- <td>
-                                <router-link :to="{name: 'edit', params: { id: User._id }}" class="btn btn-success">Edit
+                            <td>
+                                <router-link :to="{name: 'Edit', params: { id: User._id }}" class="btn btn-success">
+                                    Edit
                                 </router-link>
                                 <button @click.prevent="deleteUser(User._id)" class="btn btn-danger">Delete</button>
-                            </td> -->
+                            </td>
                         </tr>
                     </tbody>
                 </table>
@@ -51,11 +52,14 @@ export default {
             return axios.get(`${process.env.VUE_APP_BACKEND_URL}/api`)
                 .then(response => {
                     Users.value = response.data
+                    console.log(Users);
                 })
                 .catch(error => {
                     console.error(error);
                 })
         }
+
+
 
         return {
             Users,
