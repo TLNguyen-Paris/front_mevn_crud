@@ -7,8 +7,8 @@
                         <tr>
                             <th>Firstname</th>
                             <th>Lastname</th>
-                            <th>Phone</th>
                             <th>Email</th>
+                            <th>Phone</th>
                             <th>Actions</th>
                         </tr>
                     </thead>
@@ -16,8 +16,8 @@
                         <tr v-for="User in Users" :key="User._id">
                             <td>{{ User.firstname }}</td>
                             <td>{{ User.lastname }}</td>
-                            <td>{{ User.phone }}</td>
                             <td>{{ User.email }}</td>
+                            <td>{{ User.phone }}</td>
                             <td>
                                 <router-link :to="{name: 'Edit', params: { id: User._id }}" class="btn btn-success">
                                     Edit
@@ -69,7 +69,7 @@ export default {
         return {
             Users,
             getUsers,
-            deleteUser
+            deleteUser,
         }
     },
     created() {

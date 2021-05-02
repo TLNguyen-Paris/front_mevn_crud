@@ -1,6 +1,8 @@
 import {createWebHistory, createRouter} from 'vue-router';
 import Home from './../views/Home.vue';
 
+
+
 const routes = [
     {
         path:'/',
@@ -18,7 +20,7 @@ const routes = [
         component: () => import('./../views/Vue_users.vue')
     },
     {
-        path:'/edit',
+        path:'/edit/:id',
         name:"Edit",
         component: () => import('./../views/Edit_user.vue')
     }
