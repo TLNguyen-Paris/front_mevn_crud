@@ -6,8 +6,8 @@
                 <main class="row mt-4">
                     <div class="mt-4 mb-4">
                         <h3>About Me ?</h3>
-                        <p>I'm a French Full Stack developper (Jr.) mainly in javascript languages and framework.</p>
-                        <p>Check me out on <a target="_blank" href="https://www.linkedin.com/in/thanh-nguyen-paris/">Linkedin</a></p>
+                        <p>I'm a French Full Stack developper (Jr.) mainly in javascript languages and framework.<br>
+                        Check me out on <a target="_blank" href="https://www.linkedin.com/in/thanh-nguyen-paris/">Linkedin</a></p>
                     </div>
 
                     <div class="mt-4 mb-4">
