@@ -1,4 +1,4 @@
-# front_crud_vue3
+# FRONT CRUD MEVN Stack
 
 ## Project setup
 ```
