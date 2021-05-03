@@ -4,7 +4,7 @@
             <div class="col-md-6">
                 <h3 class="text-center">Create User</h3>
 
-                <form @submit.prevent="SubmitForm">
+                <form @submit="SubmitForm">
                     <div class="form-group">
                         <label>Firstname</label>
                         <input type="text" class="form-control" v-model="User.firstname" required>
