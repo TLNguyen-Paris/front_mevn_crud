@@ -2,7 +2,7 @@
     <header>
         <nav class="navbar navbar-dark bg-primary justify-content-between flex-nowrap flex-row">
             <div class="container">
-                <a href="#" class="navbar-brand float-left">CRUD</a>
+                <router-link to="/" class="navbar-brand float-left">CRUD</router-link>
                 <ul class="nav navbar-nav flex-row float-right">
 
                     <li class="nav-item">
