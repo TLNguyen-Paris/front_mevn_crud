@@ -3,25 +3,26 @@
         <div class="row justify-content-center">
             <div class="col-md-6">
                 <h3 class="text-center">Edit page</h3>
-                <form @submit.prevent="">
+
+                <form @submit.prevent="UpdateUser">
                     <div class="form-group">
-                        <label>Firstname</label>
-                        <input type="text" class="form-control" v-model="user.firstname" required>
+                        <label>Firstname :</label>
+                        <input type="text" class="form-control" :placeholder="this.$route.params.firstname" v-model="user.firstname">
                     </div>
 
                     <div class="form-group">
                         <label>Lastname</label>
-                        <input type="text" class="form-control" v-model="user.lastname" required>
+                        <input type="text" class="form-control" :placeholder="this.$route.params.lastname" v-model="user.lastname">
                     </div>
 
                     <div class="form-group">
                         <label>Email</label>
-                        <input type="email" class="form-control" v-model="user.email" required>
+                        <input type="email" class="form-control" :placeholder="this.$route.params.email" v-model="user.email">
                     </div>
 
                     <div class="form-group">
                         <label>Phone</label>
-                        <input type="number" class="form-control" v-model="user.phone" required>
+                        <input type="number" class="form-control" :placeholder="this.$route.params.phone" v-model="user.phone">
                     </div>
 
                     <div class="form-group">
@@ -38,30 +39,35 @@
     import axios from "axios"
 
     export default {
-        mounted() {
-            this.getUser()
+        data(){
+            return {
+                user: { }
+            }
         },
-        setup(){
-            
-            const user = { }
+        mounted() {
+            console.log(this.user)
+        },
+        methods: {
 
-
-            function getUser(){
-                console.log(this.$route);
-                axios.get(`${process.env.VUE_APP_BACKEND_URL}/api/find-user/${this.$route.params.id}`)
+            UpdateUser(){
+                console.log(this.user);
+                axios.post(`${process.env.VUE_APP_BACKEND_URL}/api/update-user/${this.$route.params.id}`,this.user)
                     .then( response => {
                         console.log(response);
-                        user.value = response.data
-                        console.log(user);
+                        this.$router.push('/view')
                     })
-            }
-
-            return{
-                user,
-                getUser,
+                    .catch( error => {
+                        console.error(error);
+                    })
             }
         },
         created() {
+
+            axios.get(`${process.env.VUE_APP_BACKEND_URL}/api/find-user/${this.$route.params.id}`)
+                .then( response => {
+                    this.user = response.data
+                })
+
         }
     }
 

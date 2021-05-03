@@ -19,7 +19,7 @@
                             <td>{{ User.email }}</td>
                             <td>{{ User.phone }}</td>
                             <td>
-                                <router-link :to="{name: 'Edit', params: { id: User._id }}" class="btn btn-success">
+                                <router-link :to="{name: 'Edit', params: { ...User ,id: User._id }}" class="btn btn-success">
                                     Edit
                                 </router-link>
                                 <button @click.prevent="deleteUser(User._id)" class="btn btn-danger">
