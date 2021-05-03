@@ -44,16 +44,11 @@
                 user: { }
             }
         },
-        mounted() {
-            console.log(this.user)
-        },
         methods: {
 
             UpdateUser(){
-                console.log(this.user);
                 axios.post(`${process.env.VUE_APP_BACKEND_URL}/api/update-user/${this.$route.params.id}`,this.user)
-                    .then( response => {
-                        console.log(response);
+                    .then( () => {
                         this.$router.push('/view')
                     })
                     .catch( error => {
