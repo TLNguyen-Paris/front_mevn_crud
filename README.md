@@ -1,24 +1,27 @@
-# FRONT CRUD MEVN Stack
+# Frontend CRUD MEVN Stack
 
-## Project setup
-```
-npm install
-```
+This is the frontend of my CRUD project, check out the back on this [link](https://github.com/TLNguyen-Paris/back_mevn_crud). For any question you can add me on [linkedin](https://www.linkedin.com/in/thanh-nguyen-paris/)
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+This project was created in order to learn how to split frontend and backend and communicate between them using MEVN stack (Mongo, Express, Vue3, Node).
 
-### Compiles and minifies for production
-```
-npm run build
-```
+Depedencies used : axios, vue, vue-router, dotenv, bootstrap
 
-### Lints and fixes files
+I'm not a fan of bootstrap but i've used it because it gives simple styling. I'm more fond of developing features than styling and learn how code works.
+
+
+## How to install ? 
+
+You can clone it or fork it but the code will not work fully because of the environment variable. You will need to add the backend url.
+
 ```
-npm run lint
+npm install && npm run serve
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+This project will be upload on heroku when it's fully done.
+
+## Next Step ?
+Find a Job
+
+Create a Auth using passport in MEVN Stack & adding bcrypt (depedencie)
+
+Create a E-Commerce Website MEVN Stack using all the knowledge that i acquire so far.
