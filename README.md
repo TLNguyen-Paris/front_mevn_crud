@@ -6,7 +6,7 @@ This project was created in order to learn how to split frontend and backend and
 
 Depedencies used : axios, vue, vue-router, dotenv, bootstrap
 
-I'm not a fan of bootstrap but i've used it because it gives simple styling. I'm more fond of developing features than styling and learn how code works.
+I'm not a fan of bootstrap but i've used it because it gives simple styling. I'm more fond of developing features and learn how code works than styling .
 
 
 ## How to install ? 
