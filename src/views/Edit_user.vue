@@ -3,8 +3,31 @@
         <div class="row justify-content-center">
             <div class="col-md-6">
                 <h3 class="text-center">Edit page</h3>
-                <p>{{this.$route.params}}</p>
-                <p>{{this.$route.params.id}}</p>
+                <form @submit.prevent="">
+                    <div class="form-group">
+                        <label>Firstname</label>
+                        <input type="text" class="form-control" v-model="user.firstname" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Lastname</label>
+                        <input type="text" class="form-control" v-model="user.lastname" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" class="form-control" v-model="user.email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Phone</label>
+                        <input type="number" class="form-control" v-model="user.phone" required>
+                    </div>
+
+                    <div class="form-group">
+                        <button class="btn btn-danger btn-block">Update</button>
+                    </div>
+                </form>
             </div>
         </div>
     </section>
@@ -12,41 +35,33 @@
 
 
 <script>
-    // import axios from "axios"
+    import axios from "axios"
 
     export default {
         mounted() {
-            console.log(this.$route.params);
-            this.init()
+            this.getUser()
         },
         setup(){
             
             const user = { }
 
-            function init(){
-                console.log(this.$route);  //should return object
-      console.log(this.$route.params); //should return object 
-      console.log(this.$route.params.id); //should return id of URL param
+
+            function getUser(){
+                console.log(this.$route);
+                axios.get(`${process.env.VUE_APP_BACKEND_URL}/api/find-user/${this.$route.params.id}`)
+                    .then( response => {
+                        console.log(response);
+                        user.value = response.data
+                        console.log(user);
+                    })
             }
-
-            // const getUser = () => {
-            //     return axios.get(`${process.env.VUE_APP_BACKEND_URL}/api/update-user/${this.$route.params.id}`)
-            //         .then(response => {
-            //             // user.value = response.data
-            //             console.log(response);
-            //         })
-            // }
-
-
 
             return{
                 user,
-                init
-                // getUser,
+                getUser,
             }
         },
         created() {
-            // this.getUser()
         }
     }
 
