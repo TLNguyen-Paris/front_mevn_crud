@@ -26,7 +26,7 @@
                     <div class="mt-4 mb-4">
                         <h3>What's next ?</h3>
                         <p>Find a job <br>
-                        Creating Authentication using passport.js (+bcrypt) MEVN Stack <br>
+                        Creating Authentication using passport.js (+bcrypt/Argon2) MEVN Stack <br>
                         Creating an E-Commerce website 
                         </p>
                     </div>
