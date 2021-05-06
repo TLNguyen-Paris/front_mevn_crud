@@ -17,7 +17,7 @@ You can clone it or fork it but the code will not work fully because of the envi
 npm install && npm run serve
 ```
 
-This project is deployed on heroku (it can takes few second to render) on this [link](https://vue-crud-thanh.herokuapp.com/)
+This project is deployed on heroku (it can takes few second to render) on this [link](https://vue-crud-thanh.herokuapp.com/) or [https://vue-crud-thanh.herokuapp.com/](https://vue-crud-thanh.herokuapp.com/)
 
 ## Next Step ?
 Find a Job
