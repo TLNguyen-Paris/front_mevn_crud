@@ -1,3 +1,5 @@
+# DATABASE IS DISABLE 
+
 # Frontend CRUD MEVN Stack
 
 This is the frontend of my CRUD project, check out the back on this [link](https://github.com/TLNguyen-Paris/back_mevn_crud). For any question you can add me on [linkedin](https://www.linkedin.com/in/thanh-nguyen-paris/)
@@ -17,7 +19,7 @@ You can clone it or fork it but the code will not work fully because of the envi
 npm install && npm run serve
 ```
 
-This project is deployed on heroku (it can takes few second to render) on this [link](https://vue-crud-thanh.herokuapp.com/) or [https://vue-crud-thanh.herokuapp.com/](https://vue-crud-thanh.herokuapp.com/)
+This project is deployed on heroku (it can takes few second to render) on this [link](https://vue-crud-thanh.herokuapp.com/) or [https://vue-crud-thanh.herokuapp.com/](https://vue-crud-thanh.herokuapp.com/) DATABASE IS DISABLE
 
 ## Next Step ?
 Find a Job
